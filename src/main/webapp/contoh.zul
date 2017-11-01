@@ -1,0 +1,36 @@
+<?page title="contoh" contentType="text/html;charset=UTF-8"?>
+<zk>
+	<window title="contoh" border="normal"
+		apply="org.zkoss.bind.BindComposer"
+		viewModel="@id('yn') @init('vmd.tesBindVmd')">
+		<grid>
+			<columns>
+				<column label="" width="150px" />
+				<column label="" width="200px" />
+			</columns>
+			<rows>
+				<row>
+					<label value="nama" />
+					<textbox value="@bind(yn.nama)" />
+				</row>
+				<row>
+					<label value="alas" />
+					<textbox value="@bind(yn.alas)" />
+				</row>
+				<row>
+					<label value="tinggi" />
+					<textbox value="@bind(yn.tinggi)" />
+				</row>
+				<row>
+					<button label="click" onClick="@command('kliks')" />
+					<button label="Hitung" onClick="@command('hitung')" />
+				</row>
+				<row>
+					<label value="luas" />
+					<label value="@load(yn.luas)"/>
+				</row>
+			</rows>
+		</grid>
+
+	</window>
+</zk>

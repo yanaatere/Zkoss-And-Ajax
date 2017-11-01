@@ -1,0 +1,135 @@
+<?page title="new page title" contentType="text/html;charset=UTF-8"?>
+<zk>
+	<window title="komponen" border="normal">
+		<grid>
+			<columns>
+                <column label="Type" width="120px" />
+                <column label="Content" />
+            </columns>
+			<rows>
+				<row>
+					<label value="Text Box:" />
+					<textbox value="Hello World!" width="150px"
+						tabindex="1" />
+				</row>
+				<row>
+					<label value="Password Text Box:" />
+					<textbox value="Hello World!" type="password"
+						width="150px" tabindex="1" />
+				</row>
+				<row>
+					<label value="Integer Box:" />
+					<intbox value="12345" width="150px" />
+				</row>
+				<row>
+					<label value="Decimal Box:" />
+					<decimalbox value="12.20" width="150px" />
+
+				</row>
+				<row>
+					<label value="Date Box:" />
+					<datebox format="dd-MM-yyyy" width="150px"
+						onCreate="self.value=new Date();" />
+				</row>
+				<row>
+					<label value="Text Area:" />
+					<textbox value="Hello World!" rows="5" width="150px"
+						tabindex="1" />
+
+				</row>
+				<row>
+					<label value="Captcha:" />
+					<captcha value="hello" bgColor="#FDC966"
+						fontColor="#000000" width="150px" height="50px" frame="true" />
+
+				</row>
+				<row>
+					<label value="Checkbox:" />
+					<vlayout>
+						<checkbox label="Java" />
+						<checkbox label="PHP" />
+						<checkbox label="VB 6" />
+					</vlayout>
+				</row>
+				<row>
+					<label value="Radio Button" />
+					<vlayout>
+						<radiogroup id="rg1" />
+						<radio id="ra1" label="Pria" radiogroup="rg1" />
+						<radio id="ra2" label="Wanita" radiogroup="rg1" />
+					</vlayout>
+				</row>
+				<row>
+					<label value="Button" />
+					<button label="Ini Button!" />
+				</row>
+			</rows>
+		</grid>
+		<hlayout>
+			<div width="120px">
+				<label value="Grid"></label>
+			</div>
+			<grid mold="paging" pagingPosition="bottom" pageSize="5">
+				<columns>
+					<column label="No" align="center" width="50px"
+						sort="auto" />
+					<column label="Nama" align="left" sort="auto" />
+				</columns>
+				<rows>
+					<row>
+						<label value="1" />
+						<label value="Satu" />
+					</row>
+					<row>
+						<label value="2" />
+						<label value="Dua" />
+					</row>
+					<row>
+						<label value="3" />
+						<label value="Tiga" />
+					</row>
+					<row>
+						<label value="4" />
+						<label value="Empat" />
+					</row>
+					<row>
+						<label value="5" />
+						<label value="Lima" />
+					</row>
+					<row>
+						<label value="6" />
+						<label value="Enam" />
+					</row>
+				</rows>
+			</grid>
+		</hlayout>
+		<hlayout>
+			<div width="120px">
+				<label value="Grid"></label>
+			</div>
+			<listbox mold="paging" pagingPosition="bottom" pageSize="5">
+				<listhead>
+					<listheader label="No" align="center" width="50px"
+						sort="auto" />
+					<listheader label="Nama" align="left" sort="auto" />
+					<listheader label="Asal" align="left" width="250px" />
+				</listhead>
+				<listitem>
+					<listcell>
+						<label value="1" />
+					</listcell>
+					<listcell>
+						<label value="Satu" />
+					</listcell>
+					<listcell>
+						<listbox mold="select">
+							<listitem label=" Jakarta " value="Jakarta" />
+							<listitem label="Surabaya" value="Surabaya" />
+						</listbox>
+					</listcell>
+				</listitem>
+			</listbox>
+			</hlayout>
+	</window>
+</zk>
+
