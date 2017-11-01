@@ -294,10 +294,11 @@ public class PenjualanEditVmd {
 					}
 					Clients.showNotification("Data Berhasil Disimpan",
 							Clients.NOTIFICATION_TYPE_INFO, null, null, 1500);
-					Include inc = (Include) Executions.getCurrent()
-							.getDesktop().getPage("index")
-							.getFellow("mainInclude");
-					inc.setSrc("/transaksi/penjualan.zul");
+//					Include inc = (Include) Executions.getCurrent()
+//							.getDesktop().getPage("index")
+//							.getFellow("mainInclude");
+//					inc.setSrc("/transaksi/penjualan.zul");
+					Executions.sendRedirect("/transaksi/penjualan.zul");
 				}
 			}
 		} else if (findHeader.getNoNota() != null) {

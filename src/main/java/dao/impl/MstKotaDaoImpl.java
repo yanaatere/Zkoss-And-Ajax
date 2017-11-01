@@ -133,8 +133,7 @@ public class MstKotaDaoImpl implements MstKotaDao {
 				MstKota mstKota = new MstKota();
 				mstKota.setKodeKota(rs.getString("KODE_KOTA"));
 				mstKota.setNamaKota(rs.getString("NAMA_KOTA"));
-				MstProvinsi provinsi = mstProvinsiDao.findone(rs
-						.getString("KODE_PROVINSI"));
+				MstProvinsi provinsi = mstProvinsiDao.findone(rs.getString("KODE_PROVINSI"));
 				mstKota.setKodeProvinsi(provinsi);
 				listKota.add(mstKota);
 			}

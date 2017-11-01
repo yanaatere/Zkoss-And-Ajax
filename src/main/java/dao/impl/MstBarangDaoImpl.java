@@ -208,7 +208,7 @@ public class MstBarangDaoImpl implements MstBarangDao {
 
 	@Override
 	public void updateStok(MstBarang mstBarang) {
-		String query = "UPDATE MST_BARANG SET [STOK_BARANG] = ?"
+		String query = "UPDATE MST_BARANG SET STOK_BARANG = ?"
 				+" WHERE KODE_BARANG = ?";
 		Connection con = null;
 		PreparedStatement ps = null;
